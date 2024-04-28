@@ -1,0 +1,42 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from calcService WSDL service -->
+
+  <service name="calc" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://calc"/>
+      <parameter name="wsdlServiceElement" value="calcService"/>
+      <parameter name="schemaQualified" value="http://calc"/>
+      <parameter name="wsdlServicePort" value="calc"/>
+      <parameter name="className" value="calc_pkg.CalcSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="calc"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="addition" qname="operNS:addition" xmlns:operNS="http://calc" returnQName="retNS:additionReturn" xmlns:retNS="http://calc" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="multiplication" qname="operNS:multiplication" xmlns:operNS="http://calc" returnQName="retNS:multiplicationReturn" xmlns:retNS="http://calc" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="division" qname="operNS:division" xmlns:operNS="http://calc" returnQName="retNS:divisionReturn" xmlns:retNS="http://calc" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="subtarct" qname="operNS:subtarct" xmlns:operNS="http://calc" returnQName="retNS:subtarctReturn" xmlns:retNS="http://calc" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calc" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="division multiplication subtarct addition"/>
+
+  </service>
+</deployment>

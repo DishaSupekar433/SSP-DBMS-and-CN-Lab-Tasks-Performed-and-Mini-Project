@@ -1,0 +1,11 @@
+127.0.0.1 - - [26/Oct/2023:10:33:16 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:33:17 +0530] "GET /Employee_Task_Management_System/register.jsp HTTP/1.1" 200 7995
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:33:21 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:34:04 +0530] "GET /Employee_Task_Management_System/register.jsp HTTP/1.1" 200 7995
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:46:04 +0530] "POST /Employee_Task_Management_System/RegisterServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:46:39 +0530] "POST /Employee_Task_Management_System/RegisterServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:47:16 +0530] "POST /Employee_Task_Management_System/RegisterServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:47:31 +0530] "POST /Employee_Task_Management_System/RegisterServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:48:23 +0530] "POST /Employee_Task_Management_System/RegisterServlet HTTP/1.1" 200 3498
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:48:49 +0530] "POST /Employee_Task_Management_System/LoginServlet HTTP/1.1" 200 5109
+0:0:0:0:0:0:0:1 - - [26/Oct/2023:10:53:10 +0530] "GET /Employee_Task_Management_System/register.jsp HTTP/1.1" 200 7995

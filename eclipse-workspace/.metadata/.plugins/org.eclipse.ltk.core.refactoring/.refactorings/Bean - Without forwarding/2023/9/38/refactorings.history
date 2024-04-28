@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Bean - Without forwarding/src/main/webapp/print.jsp&apos; to &apos;abc.jsp&apos;" description="Rename resource &apos;print.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/print.jsp" name="abc.jsp" stamp="1695374244609" updateReferences="true"/>
+</session>

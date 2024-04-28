@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from tempService WSDL service -->
+
+  <service name="temp" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://temp"/>
+      <parameter name="wsdlServiceElement" value="tempService"/>
+      <parameter name="schemaQualified" value="http://temp"/>
+      <parameter name="wsdlServicePort" value="temp"/>
+      <parameter name="className" value="temp.temp"/>
+      <parameter name="wsdlPortType" value="temp"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://temp" xmlns:retNS="http://temp" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="toFahrenheit" qname="operNS:toFahrenheit" returnQName="retNS:toFahrenheitReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://temp" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:temp" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://temp" xmlns:retNS="http://temp" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="toCelsius" qname="operNS:toCelsius" returnQName="retNS:toCelsiusReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://temp" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:temp" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="toCelsius toFahrenheit"/>
+
+  </service>
+</deployment>

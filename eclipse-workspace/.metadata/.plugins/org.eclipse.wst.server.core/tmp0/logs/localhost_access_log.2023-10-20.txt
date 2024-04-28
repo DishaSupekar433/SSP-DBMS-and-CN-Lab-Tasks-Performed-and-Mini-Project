@@ -1,0 +1,8 @@
+127.0.0.1 - - [20/Oct/2023:22:55:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [20/Oct/2023:22:55:41 +0530] "GET /Employee_Task_Management/WEB-INF/register.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [20/Oct/2023:22:55:41 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [20/Oct/2023:22:59:59 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [20/Oct/2023:23:00:00 +0530] "GET /Employee_Task_Management/WEB-INF/register.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [20/Oct/2023:23:01:52 +0530] "GET /Employee_Task_Management/WEB-INF/register.jsp HTTP/1.1" 404 682
+127.0.0.1 - - [20/Oct/2023:23:05:36 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [20/Oct/2023:23:05:36 +0530] "GET /Employee_Task_Management/ HTTP/1.1" 404 780

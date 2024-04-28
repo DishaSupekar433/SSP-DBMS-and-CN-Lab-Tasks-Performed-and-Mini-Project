@@ -1,0 +1,15 @@
+127.0.0.1 - - [22/Sep/2023:14:50:48 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:14:50:50 +0530] "GET /Bean_-_Without_forwarding/index.jsp HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:14:50:50 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:14:51:08 +0530] "GET /Bean_-_Without_forwarding/abc.jsp?id=3154&name=Disha&address=Maharashtra HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:14:54:53 +0530] "GET /Bean_-_Without_forwarding/abc.jsp?id=3154&name=Disha&address=Maharashtra HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:01:23 +0530] "GET /Bean/index.jsp HTTP/1.1" 200 358
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:01:52 +0530] "GET /Bean/abc.jsp?id=1234&name=Disha&address=Sambhajinagar HTTP/1.1" 200 199
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:02:31 +0530] "GET /Bean/abc.jsp?id=1234&name=Disha&address=Sambhajinagar HTTP/1.1" 200 199
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:05:11 +0530] "GET /Bean/abc.jsp?id=1234&name=Disha&address=Sambhajinagar HTTP/1.1" 200 199
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:08:40 +0530] "GET /usebean2/getname.html HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:09:16 +0530] "GET /Practical%208/index.html HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:09:27 +0530] "GET /Practical8/index.html HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:09:41 +0530] "GET /Practical_8/index.jsp HTTP/1.1" 200 381
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:10:21 +0530] "GET /Practical_8/index.html HTTP/1.1" 404 777
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:10:27 +0530] "GET /Practical_8/index.jsp HTTP/1.1" 200 381

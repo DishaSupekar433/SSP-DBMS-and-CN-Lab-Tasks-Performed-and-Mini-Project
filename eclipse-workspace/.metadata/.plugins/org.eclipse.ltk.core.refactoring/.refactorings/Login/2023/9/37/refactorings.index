@@ -1,0 +1,4 @@
+1694528285993	Move 'login.jsp' to 'webapp'
+1694528351168	Move 'web.xml' to 'webapp'
+1694528370082	Move 'web.xml' to 'WEB-INF'
+1694528372910	Move 'welcome.jsp' to 'webapp'
