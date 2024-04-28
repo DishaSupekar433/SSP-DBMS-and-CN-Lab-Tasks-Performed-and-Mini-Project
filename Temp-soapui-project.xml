@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="24e459ca-86b7-40f1-b87d-9aef0f18b322" activeEnvironment="Default" name="Temp" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8a7b3a69-d8f1-42e7-8377-04d08a5c0fdd" wsaVersion="NONE" name="tempSoapBinding" type="wsdl" bindingName="{http://temp}tempSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/DISHA/eclipse-workspace/Temp/src/main/webapp/wsdl/temp.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\DISHA\eclipse-workspace\Temp\src\main\webapp\wsdl\temp.wsdl"><con:part><con:url>file:\C:\Users\DISHA\eclipse-workspace\Temp\src\main\webapp\wsdl\temp.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://temp" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://temp" xmlns:intf="http://temp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://temp" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="toFahrenheit">
+        <complexType>
+          <sequence>
+            <element name="temp" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="toFahrenheitResponse">
+        <complexType>
+          <sequence>
+            <element name="toFahrenheitReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="toCelsius">
+        <complexType>
+          <sequence>
+            <element name="temp" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="toCelsiusResponse">
+        <complexType>
+          <sequence>
+            <element name="toCelsiusReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="toFahrenheitRequest">
+    <wsdl:part element="impl:toFahrenheit" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toCelsiusResponse">
+    <wsdl:part element="impl:toCelsiusResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toCelsiusRequest">
+    <wsdl:part element="impl:toCelsius" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toFahrenheitResponse">
+    <wsdl:part element="impl:toFahrenheitResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="temp">
+    <wsdl:operation name="toFahrenheit">
+      <wsdl:input message="impl:toFahrenheitRequest" name="toFahrenheitRequest"></wsdl:input>
+      <wsdl:output message="impl:toFahrenheitResponse" name="toFahrenheitResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toCelsius">
+      <wsdl:input message="impl:toCelsiusRequest" name="toCelsiusRequest"></wsdl:input>
+      <wsdl:output message="impl:toCelsiusResponse" name="toCelsiusResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="tempSoapBinding" type="impl:temp">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="toFahrenheit">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="toFahrenheitRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="toFahrenheitResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toCelsius">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="toCelsiusRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="toCelsiusResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="tempService">
+    <wsdl:port binding="impl:tempSoapBinding" name="temp">
+      <wsdlsoap:address location="http://localhost:8081/Temp/services/temp"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8081/Temp/services/temp</con:endpoint></con:endpoints><con:operation id="3000c620-ffa2-4eca-bf15-c5a1f1a66a2e" isOneWay="false" action="" name="toCelsius" bindingOperationName="toCelsius" type="Request-Response" outputName="toCelsiusResponse" inputName="toCelsiusRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b6add6a-1cd6-4e7a-bfc6-66c3291caace" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Temp/services/temp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:temp="http://temp">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <temp:toCelsius>\r
+         <temp:temp>32</temp:temp>\r
+      </temp:toCelsius>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://temp/temp/toCelsiusRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bb951632-9738-490d-a150-20f48744a737" isOneWay="false" action="" name="toFahrenheit" bindingOperationName="toFahrenheit" type="Request-Response" outputName="toFahrenheitResponse" inputName="toFahrenheitRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b3afe884-a521-40e7-8ba5-0f03e0a0e3c9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Temp/services/temp</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:temp="http://temp">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <temp:toFahrenheit>\r
+         <temp:temp>32</temp:temp>\r
+      </temp:toFahrenheit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://temp/temp/toFahrenheitRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

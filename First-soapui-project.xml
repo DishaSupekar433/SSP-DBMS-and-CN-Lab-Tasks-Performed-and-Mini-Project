@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5e4179c1-3db3-4176-a93d-7238d396099f" activeEnvironment="Default" name="First" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="89078a9e-f6c6-4021-850f-f6838d13ebfd" wsaVersion="NONE" name="soapSoapBinding" type="wsdl" bindingName="{http://soap}soapSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/DISHA/eclipse-workspace/SOAP/src/main/webapp/wsdl/soap.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\DISHA\eclipse-workspace\SOAP\src\main\webapp\wsdl\soap.wsdl"><con:part><con:url>file:\C:\Users\DISHA\eclipse-workspace\SOAP\src\main\webapp\wsdl\soap.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://soap" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soap" xmlns:intf="http://soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://soap" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="addition">
+        <complexType>
+          <sequence>
+            <element name="a" type="xsd:int"/>
+            <element name="b" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="additionResponse">
+        <complexType>
+          <sequence>
+            <element name="additionReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="additionRequest">
+    <wsdl:part element="impl:addition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionResponse">
+    <wsdl:part element="impl:additionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="soap">
+    <wsdl:operation name="addition">
+      <wsdl:input message="impl:additionRequest" name="additionRequest"></wsdl:input>
+      <wsdl:output message="impl:additionResponse" name="additionResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soapSoapBinding" type="impl:soap">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addition">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="additionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="additionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="soapService">
+    <wsdl:port binding="impl:soapSoapBinding" name="soap">
+      <wsdlsoap:address location="http://localhost:8081/SOAP/services/soap"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8081/SOAP/services/soap</con:endpoint></con:endpoints><con:operation id="5626bf75-e990-49f1-be0d-0e7ba52738f4" isOneWay="false" action="" name="addition" bindingOperationName="addition" type="Request-Response" outputName="additionResponse" inputName="additionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8b8962b0-ac3c-4cb0-9302-95ec78427d3f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/SOAP/services/soap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:addition>\r
+         <soap:a>10</soap:a>\r
+         <soap:b>15</soap:b>\r
+      </soap:addition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap/soap/additionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

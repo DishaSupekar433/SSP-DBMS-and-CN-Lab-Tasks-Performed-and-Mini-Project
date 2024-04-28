@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e4e4fbd2-5db8-4cab-a007-df1a76118615" activeEnvironment="Default" name="Calculator" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3f0d8587-9be0-4ddb-8a37-0e445add167f" wsaVersion="NONE" name="calcSoapBinding" type="wsdl" bindingName="{http://calc}calcSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/DISHA/eclipse-workspace/Calc/src/main/webapp/wsdl/calc.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\DISHA\eclipse-workspace\Calc\src\main\webapp\wsdl\calc.wsdl"><con:part><con:url>file:\C:\Users\DISHA\eclipse-workspace\Calc\src\main\webapp\wsdl\calc.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://calc" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://calc" xmlns:intf="http://calc" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://calc" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="addition">
+        <complexType>
+          <sequence>
+            <element name="a" type="xsd:int"/>
+            <element name="b" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="additionResponse">
+        <complexType>
+          <sequence>
+            <element name="additionReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplication">
+        <complexType>
+          <sequence>
+            <element name="a" type="xsd:int"/>
+            <element name="b" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplicationResponse">
+        <complexType>
+          <sequence>
+            <element name="multiplicationReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="division">
+        <complexType>
+          <sequence>
+            <element name="a" type="xsd:int"/>
+            <element name="b" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="divisionResponse">
+        <complexType>
+          <sequence>
+            <element name="divisionReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtarct">
+        <complexType>
+          <sequence>
+            <element name="a" type="xsd:int"/>
+            <element name="b" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtarctResponse">
+        <complexType>
+          <sequence>
+            <element name="subtarctReturn" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="multiplicationRequest">
+    <wsdl:part element="impl:multiplication" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtarctRequest">
+    <wsdl:part element="impl:subtarct" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtarctResponse">
+    <wsdl:part element="impl:subtarctResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionResponse">
+    <wsdl:part element="impl:divisionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionRequest">
+    <wsdl:part element="impl:addition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionResponse">
+    <wsdl:part element="impl:additionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicationResponse">
+    <wsdl:part element="impl:multiplicationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionRequest">
+    <wsdl:part element="impl:division" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="calc">
+    <wsdl:operation name="addition">
+      <wsdl:input message="impl:additionRequest" name="additionRequest"></wsdl:input>
+      <wsdl:output message="impl:additionResponse" name="additionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdl:input message="impl:multiplicationRequest" name="multiplicationRequest"></wsdl:input>
+      <wsdl:output message="impl:multiplicationResponse" name="multiplicationResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdl:input message="impl:divisionRequest" name="divisionRequest"></wsdl:input>
+      <wsdl:output message="impl:divisionResponse" name="divisionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtarct">
+      <wsdl:input message="impl:subtarctRequest" name="subtarctRequest"></wsdl:input>
+      <wsdl:output message="impl:subtarctResponse" name="subtarctResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="calcSoapBinding" type="impl:calc">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addition">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="additionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="additionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="multiplicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="divisionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="divisionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtarct">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="subtarctRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="subtarctResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="calcService">
+    <wsdl:port binding="impl:calcSoapBinding" name="calc">
+      <wsdlsoap:address location="http://localhost:8081/Calc/services/calc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8081/Calc/services/calc</con:endpoint></con:endpoints><con:operation id="87d04e44-aff2-4cbb-b0d9-5c48cd018d11" isOneWay="false" action="" name="addition" bindingOperationName="addition" type="Request-Response" outputName="additionResponse" inputName="additionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fcaa6c05-5f9e-4d4e-bb9a-9948391f8ed9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Calc/services/calc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:calc="http://calc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <calc:addition>\r
+         <calc:a>20</calc:a>\r
+         <calc:b>15</calc:b>\r
+      </calc:addition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calc/calc/additionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="20c677a6-e623-4dbe-8727-67326961f3c1" isOneWay="false" action="" name="division" bindingOperationName="division" type="Request-Response" outputName="divisionResponse" inputName="divisionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="900a7e23-7121-4386-96cd-61ba746283cb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Calc/services/calc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:calc="http://calc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <calc:division>\r
+         <calc:a>125</calc:a>\r
+         <calc:b>25</calc:b>\r
+      </calc:division>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calc/calc/divisionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="de62596c-eaa9-4e75-b132-1d140383e530" isOneWay="false" action="" name="multiplication" bindingOperationName="multiplication" type="Request-Response" outputName="multiplicationResponse" inputName="multiplicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="86c43ab8-6ea1-4fb4-b54a-cf013cce9290" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Calc/services/calc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:calc="http://calc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <calc:multiplication>\r
+         <calc:a>99</calc:a>\r
+         <calc:b>21</calc:b>\r
+      </calc:multiplication>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calc/calc/multiplicationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4e356175-c385-45f5-9b86-20f4d40ca294" isOneWay="false" action="" name="subtarct" bindingOperationName="subtarct" type="Request-Response" outputName="subtarctResponse" inputName="subtarctRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="98217d4c-74ea-485c-8157-81ffd2aed8e3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/Calc/services/calc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:calc="http://calc">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <calc:subtarct>\r
+         <calc:a>40</calc:a>\r
+         <calc:b>15</calc:b>\r
+      </calc:subtarct>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://calc/calc/subtarctRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
